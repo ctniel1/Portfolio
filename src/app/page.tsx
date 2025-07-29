@@ -1,20 +1,50 @@
+'use client';
 import React from 'react';
-import { Button } from '@/components/button';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-gray-900 p-6">
-      <section className="mb-16">
-        <h2 className="text-2xl font-semibold mb-2">{`Hi, I'm Chris 👋`}</h2>
-        <p className="text-lg max-w-xl">Senior Frontend Engineer focused on building performant, accessible, and polished user interfaces with React and TypeScript. Passionate about clean code, system design, and continuous learning.</p>
-        <div className="mt-4">
-          <Button asChild>
-            <a href="/Christopher_Nielson_Resume.docx" download>
-              Download Resume
-            </a>
-          </Button>
+    <main className="flex min-h-screen flex-col items-center justify-center p-6 text-center">
+      <h1 className="mb-2 text-6xl font-bold">Christopher Nielson</h1>
+      <p className="mb-8 text-2xl">Developer</p>
+
+      <div className="relative h-64 w-full max-w-4xl overflow-hidden">
+        {/* Tech icons floating animation */}
+        <div className="animate-slide absolute inset-0 flex items-center space-x-8">
+          {['react', 'typescript', 'javascript', 'html', 'css'].map((tech, idx) => (
+            <Image
+              key={idx}
+              src={`/${tech}.png`} // Replace with correct paths to your icons
+              alt={tech}
+              width={40}
+              height={40}
+              className="animate-float"
+              style={{ animationDelay: `${idx * 1.5}s` }}
+            />
+          ))}
         </div>
-      </section>
+      </div>
+
+      <style jsx>{`
+        @keyframes slide {
+          0% {
+            transform: translateX(-100%) scale(0);
+            opacity: 0;
+          }
+          50% {
+            transform: translateX(0%) scale(1);
+            opacity: 1;
+          }
+          100% {
+            transform: translateX(100%) scale(0);
+            opacity: 0;
+          }
+        }
+
+        .animate-slide > img {
+          animation: slide 8s linear infinite;
+        }
+      `}</style>
     </main>
   );
 }
