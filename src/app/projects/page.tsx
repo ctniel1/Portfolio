@@ -13,6 +13,15 @@ export default function ProjectsPage() {
           Tic-Tac-Toe
         </a>
       </div>
+      <div>
+        <a
+          href="https://investment-calculator-cn.vercel.app/"
+          target="_blank"
+          className="block border-b border-gray-200 p-4"
+        >
+          Investment Calculator
+        </a>
+      </div>
     </main>
   );
 }
