@@ -105,17 +105,17 @@ export default function AboutPage() {
     <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-24">
       <div className="mx-auto max-w-6xl px-6 py-12">
         {/* Header Section */}
-        <div className="mb-16 text-center">
-          <h1 className="mb-6 text-4xl font-bold text-white md:text-5xl">About Chris</h1>
-          <div className="mx-auto mb-8 h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-500"></div>
-          <p className="mx-auto max-w-4xl text-xl leading-relaxed text-gray-300">
+        <div className="mb-12 text-center md:mb-16">
+          <h1 className="mb-4 text-3xl font-bold text-white md:mb-6 md:text-4xl lg:text-5xl">About Chris</h1>
+          <div className="mx-auto mb-6 h-1 w-20 bg-gradient-to-r from-blue-500 to-purple-500 md:mb-8 md:w-24"></div>
+          <p className="mx-auto max-w-4xl text-lg leading-relaxed text-gray-300 md:text-xl">
             Frontend Engineer, Competitive Swimmer, Drummer, Father, and Aspiring Game Developer
           </p>
         </div>
 
         {/* Introduction */}
-        <div className="mb-16 rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
-          <h2 className="mb-6 text-2xl font-bold text-white">My Journey</h2>
+        <div className="mb-12 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm md:mb-16 md:p-8">
+          <h2 className="mb-4 text-xl font-bold text-white md:mb-6 md:text-2xl">My Journey</h2>
           <div className="space-y-4 leading-relaxed text-gray-300">
             <p>
               I&apos;m a Senior Frontend Engineer based in Utah County, where I combine my passion
@@ -141,15 +141,15 @@ export default function AboutPage() {
         </div>
 
         {/* Highlights Grid */}
-        <div className="mb-16">
-          <h2 className="mb-12 text-center text-2xl font-bold text-white">
+        <div className="mb-12 md:mb-16">
+          <h2 className="mb-8 text-center text-xl font-bold text-white md:mb-12 md:text-2xl">
             What Defines My Approach
           </h2>
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             {highlights.map((highlight, index) => (
               <div
                 key={index}
-                className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:shadow-lg hover:shadow-blue-500/10"
+                className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:shadow-lg hover:shadow-blue-500/10 md:p-6"
               >
                 <div className="mb-4 inline-flex rounded-xl bg-blue-500/20 p-3 text-blue-300">
                   {highlight.icon}
@@ -162,15 +162,15 @@ export default function AboutPage() {
         </div>
 
         {/* Life Timeline */}
-        <div className="mb-16">
-          <h2 className="mb-12 text-center text-2xl font-bold text-white">
+        <div className="mb-12 md:mb-16">
+          <h2 className="mb-8 text-center text-xl font-bold text-white md:mb-12 md:text-2xl">
             Life & Career Timeline
           </h2>
-          <div className="space-y-8">
+          <div className="space-y-6 md:space-y-8">
             {milestones.map((milestone, index) => (
               <div
                 key={index}
-                className="flex flex-col gap-6 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 md:flex-row"
+                className="flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 md:flex-row md:gap-6 md:p-6"
               >
                 <div className="flex-shrink-0 md:w-48">
                   <span className="rounded-full bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 text-sm font-semibold text-white">
@@ -178,7 +178,7 @@ export default function AboutPage() {
                   </span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="mb-2 text-xl font-semibold text-white">{milestone.title}</h3>
+                  <h3 className="mb-2 text-lg font-semibold text-white md:text-xl">{milestone.title}</h3>
                   <p className="leading-relaxed text-gray-300">{milestone.description}</p>
                 </div>
               </div>
@@ -187,9 +187,9 @@ export default function AboutPage() {
         </div>
 
         {/* Personal Interests */}
-        <div className="mb-16 grid gap-8 md:grid-cols-2">
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
-            <h2 className="mb-6 text-2xl font-bold text-white">When I&apos;m Not Coding</h2>
+        <div className="mb-12 grid gap-6 md:mb-16 md:grid-cols-2 md:gap-8">
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm md:p-8">
+            <h2 className="mb-4 text-xl font-bold text-white md:mb-6 md:text-2xl">When I&apos;m Not Coding</h2>
             <div className="space-y-4 text-gray-300">
               <div className="flex items-start gap-3">
                 <div className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-blue-400"></div>
@@ -219,8 +219,8 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
-            <h2 className="mb-6 text-2xl font-bold text-white">Current Projects & Dreams</h2>
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm md:p-8">
+            <h2 className="mb-4 text-xl font-bold text-white md:mb-6 md:text-2xl">Current Projects & Dreams</h2>
             <div className="space-y-4 text-gray-300">
               <div>
                 <h3 className="mb-2 font-semibold text-white">Disneyland Simulator</h3>
@@ -248,22 +248,22 @@ export default function AboutPage() {
         </div>
 
         {/* Call to Action */}
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur-sm">
-          <h2 className="mb-4 text-2xl font-bold text-white">Let&apos;s Connect</h2>
-          <p className="mx-auto mb-6 max-w-2xl text-gray-300">
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-sm md:p-8">
+          <h2 className="mb-3 text-xl font-bold text-white md:mb-4 md:text-2xl">Let&apos;s Connect</h2>
+          <p className="mx-auto mb-4 max-w-2xl text-sm text-gray-300 md:mb-6 md:text-base">
             Whether you want to discuss frontend development, swap Michael Crichton book
             recommendations, or talk about the future of gaming, I&apos;d love to connect.
           </p>
-          <div className="flex flex-col justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
             <a
               href="/contact"
-              className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 font-semibold text-white transition-all duration-300 hover:scale-105 hover:from-blue-700 hover:to-purple-700"
+              className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 px-5 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:scale-105 hover:from-blue-700 hover:to-purple-700 md:px-6 md:py-3 md:text-base"
             >
               Get In Touch
             </a>
             <a
               href="/projects"
-              className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-6 py-3 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/20"
+              className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/20 md:px-6 md:py-3 md:text-base"
             >
               View My Work
             </a>

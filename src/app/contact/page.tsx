@@ -49,10 +49,10 @@ export default function ContactPage() {
     <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-24">
       <div className="mx-auto max-w-4xl px-6 py-12">
         {/* Header Section */}
-        <div className="mb-16 text-center">
-          <h1 className="mb-6 text-4xl font-bold text-white md:text-5xl">Let&apos;s Connect</h1>
-          <div className="mx-auto mb-6 h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-500"></div>
-          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-gray-300">
+        <div className="mb-12 text-center md:mb-16">
+          <h1 className="mb-4 text-3xl font-bold text-white md:mb-6 md:text-4xl lg:text-5xl">Let&apos;s Connect</h1>
+          <div className="mx-auto mb-4 h-1 w-20 bg-gradient-to-r from-blue-500 to-purple-500 md:mb-6 md:w-24"></div>
+          <p className="mx-auto max-w-2xl text-base leading-relaxed text-gray-300 md:text-lg">
             I&apos;m always interested in discussing new opportunities, collaborating on projects,
             or just connecting with fellow developers. Feel free to reach out through any of these
             channels.
@@ -60,14 +60,14 @@ export default function ContactPage() {
         </div>
 
         {/* Contact Methods */}
-        <div className="mb-16 grid gap-8 md:grid-cols-3">
+        <div className="mb-12 grid gap-6 md:mb-16 md:grid-cols-3 md:gap-8">
           {contactMethods.map((method, index) => (
             <a
               key={index}
               href={method.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`group block rounded-2xl border p-8 transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+              className={`group block rounded-2xl border p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl md:p-8 ${
                 method.primary
                   ? 'border-blue-400/30 bg-gradient-to-br from-blue-600/20 to-purple-600/20 hover:border-blue-400/50 hover:shadow-blue-500/20'
                   : 'border-white/10 bg-white/5 backdrop-blur-sm hover:border-white/20 hover:bg-white/10 hover:shadow-white/10'
@@ -80,12 +80,12 @@ export default function ContactPage() {
               >
                 {method.icon}
               </div>
-              <h3 className="mb-2 text-xl font-semibold text-white transition-colors group-hover:text-blue-300">
+              <h3 className="mb-2 text-lg font-semibold text-white transition-colors group-hover:text-blue-300 md:text-xl">
                 {method.title}
               </h3>
-              <p className="mb-3 text-gray-400">{method.description}</p>
+              <p className="mb-3 text-sm text-gray-400 md:text-base">{method.description}</p>
               <p
-                className={`font-medium ${
+                className={`text-sm font-medium md:text-base ${
                   method.primary ? 'text-blue-300' : 'text-gray-300'
                 } transition-colors group-hover:text-white`}
               >
@@ -96,9 +96,9 @@ export default function ContactPage() {
         </div>
 
         {/* Quick Contact Card */}
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur-sm">
-          <h2 className="mb-4 text-2xl font-bold text-white">Ready to Start a Conversation?</h2>
-          <p className="mx-auto mb-8 max-w-xl text-gray-300">
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-sm md:p-8">
+          <h2 className="mb-3 text-xl font-bold text-white md:mb-4 md:text-2xl">Ready to Start a Conversation?</h2>
+          <p className="mx-auto mb-6 max-w-xl text-sm text-gray-300 md:mb-8 md:text-base">
             Whether you&apos;re looking for a developer to join your team, need help with a project,
             or just want to chat about technology, I&apos;d love to hear from you.
           </p>

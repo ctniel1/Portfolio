@@ -72,10 +72,10 @@ export default function Home() {
         <AnimatedHero />
 
         {/* Hero Content */}
-        <div className="relative z-10 mx-auto max-w-4xl rounded-3xl border border-white/10 bg-black/10 p-12 px-6 text-center backdrop-blur-sm">
-          <h1 className="mb-4 text-5xl font-bold text-white md:text-7xl">Christopher Nielson</h1>
-          <p className="mb-8 text-xl text-blue-200 md:text-2xl">Senior Frontend Engineer</p>
-          <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-gray-300">
+        <div className="relative z-10 mx-auto max-w-4xl rounded-3xl border border-white/10 bg-black/10 p-6 text-center backdrop-blur-sm md:p-12">
+          <h1 className="mb-4 text-4xl font-bold text-white md:text-5xl lg:text-7xl">Christopher Nielson</h1>
+          <p className="mb-8 text-lg text-blue-200 md:text-xl lg:text-2xl">Senior Frontend Engineer</p>
+          <p className="mx-auto mb-10 max-w-2xl text-base leading-relaxed text-gray-300 md:text-lg">
             Passionate about creating exceptional user experiences with modern web technologies.
             Specializing in React, TypeScript, and scalable frontend architecture.
           </p>
@@ -125,11 +125,11 @@ export default function Home() {
 
             <div>
               <h3 className="mb-6 text-xl font-semibold text-white">Technologies I Work With</h3>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
                 {techSkills.map(skill => (
                   <div
                     key={skill}
-                    className="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-center text-gray-300 backdrop-blur-sm transition-colors duration-200 hover:bg-white/10"
+                    className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-center text-sm text-gray-300 backdrop-blur-sm transition-colors duration-200 hover:bg-white/10 md:px-4 md:text-base"
                   >
                     {skill}
                   </div>

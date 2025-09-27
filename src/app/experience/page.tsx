@@ -65,12 +65,12 @@ export default function ExperiencePage() {
     <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 pt-24">
       <div className="mx-auto max-w-6xl px-6 py-12">
         {/* Header Section */}
-        <div className="mb-16 text-center">
-          <h1 className="mb-6 text-4xl font-bold text-white md:text-5xl">
+        <div className="mb-12 text-center md:mb-16">
+          <h1 className="mb-4 text-3xl font-bold text-white md:mb-6 md:text-4xl lg:text-5xl">
             Professional Experience
           </h1>
-          <div className="mx-auto mb-6 h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-500"></div>
-          <p className="mx-auto max-w-3xl text-lg leading-relaxed text-gray-300">
+          <div className="mx-auto mb-4 h-1 w-20 bg-gradient-to-r from-blue-500 to-purple-500 md:mb-6 md:w-24"></div>
+          <p className="mx-auto max-w-3xl text-base leading-relaxed text-gray-300 md:text-lg">
             Over 4+ years of experience building scalable web applications, leading frontend
             initiatives, and collaborating with cross-functional teams to deliver impactful
             solutions.
@@ -82,27 +82,27 @@ export default function ExperiencePage() {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="relative rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:shadow-xl hover:shadow-blue-500/10"
+              className="relative rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:shadow-xl hover:shadow-blue-500/10 md:p-8"
             >
               {/* Current Role Badge */}
               {exp.current && (
-                <div className="absolute top-6 right-6">
-                  <span className="rounded-full border border-green-400/20 bg-green-500/20 px-3 py-1 text-sm font-medium text-green-300">
+                <div className="absolute top-4 right-4 md:top-6 md:right-6">
+                  <span className="rounded-full border border-green-400/20 bg-green-500/20 px-2.5 py-1 text-xs font-medium text-green-300 md:px-3 md:text-sm">
                     Current Role
                   </span>
                 </div>
               )}
 
               {/* Header with Logo */}
-              <div className="mb-6 flex items-start gap-6">
+              <div className="mb-6 flex flex-col items-start gap-4 sm:flex-row sm:gap-6">
                 <div className="flex-shrink-0">
                   <CompanyLogo src={exp.logo} alt={`${exp.company} logo`} company={exp.company} />
                 </div>
 
                 <div className="flex-1">
-                  <h2 className="mb-1 text-2xl font-bold text-white">{exp.title}</h2>
-                  <h3 className="mb-2 text-xl font-semibold text-blue-300">{exp.company}</h3>
-                  <div className="flex flex-col gap-2 text-gray-400 sm:flex-row sm:items-center">
+                  <h2 className="mb-1 text-xl font-bold text-white md:text-2xl">{exp.title}</h2>
+                  <h3 className="mb-2 text-lg font-semibold text-blue-300 md:text-xl">{exp.company}</h3>
+                  <div className="flex flex-col gap-2 text-sm text-gray-400 sm:flex-row sm:items-center md:text-base">
                     <span className="flex items-center gap-2">
                       <svg
                         className="h-4 w-4"
@@ -178,21 +178,21 @@ export default function ExperiencePage() {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-16 rounded-2xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur-sm">
-          <h2 className="mb-4 text-2xl font-bold text-white">Ready to Work Together?</h2>
-          <p className="mb-6 text-gray-300">
+        <div className="mt-12 rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-sm md:mt-16 md:p-8">
+          <h2 className="mb-3 text-xl font-bold text-white md:mb-4 md:text-2xl">Ready to Work Together?</h2>
+          <p className="mb-4 text-sm text-gray-300 md:mb-6 md:text-base">
             I&apos;m always open to discussing new opportunities and exciting projects.
           </p>
-          <div className="flex flex-col justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
             <a
               href="/contact"
-              className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-3 font-semibold text-white transition-all duration-300 hover:scale-105 hover:from-blue-700 hover:to-purple-700"
+              className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 px-5 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:scale-105 hover:from-blue-700 hover:to-purple-700 md:px-6 md:py-3 md:text-base"
             >
               Get In Touch
             </a>
             <a
               href="mailto:ctniel1@gmail.com"
-              className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-6 py-3 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/20"
+              className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white/20 md:px-6 md:py-3 md:text-base"
             >
               Email Me
             </a>
